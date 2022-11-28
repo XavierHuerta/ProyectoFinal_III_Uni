@@ -11,9 +11,10 @@ public class Personaje {
     private final int ancho=40;
     private final int alto=40;
     private final int movimiento=40;
+    JLabel player;
     
     public Personaje(){
-        
+        player = new JLabel();
     }
             
     //Construccion grafico del personaje
@@ -22,7 +23,10 @@ public class Personaje {
         grafico.fillOval(x,y,ancho,alto);
         grafico.setColor(Color.BLACK);
         grafico.drawOval(x, y, alto, ancho);*/
-        JLabel player = new JLabel();
+        
+        player.setIcon(new ImageIcon("kirby.ico"));
+        player.setSize(ancho, alto);
+
         
     }
     
