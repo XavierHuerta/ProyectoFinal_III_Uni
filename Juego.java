@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 
 public class Juego extends JPanel{
-    int level = 1;
+    int level = 2;
     
     //Instanciamiento de los objetos
     Laberito laberinto= new Laberito();
