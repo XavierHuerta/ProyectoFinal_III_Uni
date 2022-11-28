@@ -15,8 +15,8 @@ public class Laberito {
     }
     
     //Construccion de la paredes, posibidad de pasarlo a una clase aparte
-    public void paint (Graphics grafico){
-        int[][]laberito=obtieneLaberito();
+    public void paint (Graphics grafico, int level){
+        int[][]laberito=obtieneLaberito(level);
         
         for(fila=0;fila<numeroFilas;fila++){//for que recorre las columnas
             for(columna=0;columna<numeroColumnas;columna++){//for que recorre las filas
@@ -32,8 +32,10 @@ public class Laberito {
     }
     
     //Asignacion del laberito, los 1 son las parede y los 0 espacion vacios
-    public int[][] obtieneLaberito(){
-        int laberito[][]=
+    public int[][] obtieneLaberito(int level){
+        int laberito[][]=new int[13][23];
+
+        int [][] level1 =
         {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
          {1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1},
          {1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1},
@@ -48,6 +50,11 @@ public class Laberito {
          {1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
          {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
         };
+
+
+        if(level == 1){
+            laberito = level1;
+        }
         return laberito;
     }
 }

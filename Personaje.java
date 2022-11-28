@@ -31,8 +31,8 @@ public class Personaje {
     
     //Asignacion de los movimientos del personaje
     //Idea, dar la posibilidad al usuario de cambiar las teclas por las que el desee
-    public void teclaPresionada(KeyEvent evento){//37,38,39,40 son el valor de teclado de la flechas
-        int [][]laberito=lab.obtieneLaberito();
+    public void teclaPresionada(KeyEvent evento, int level){//37,38,39,40 son el valor de teclado de la flechas
+        int [][]laberito=lab.obtieneLaberito(level);
         if(evento.getKeyCode()==37){//flecha izquierda
             if(laberito[y/40][(x/40)-1]!=1){
                 x=x-movimiento;
