@@ -24,8 +24,7 @@ public class Personaje {
         grafico.setColor(Color.BLACK);
         grafico.drawOval(x, y, alto, ancho);*/
         
-        player.setIcon(new ImageIcon("kirby.ico"));
-        player.setSize(ancho, alto);
+        
 
         
     }
