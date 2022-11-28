@@ -23,7 +23,7 @@ public class Personaje {
         grafico.setColor(Color.BLACK);
         grafico.drawOval(x, y, alto, ancho);*/
         JLabel player = new JLabel();
-        player.setIcon(null);
+        
     }
     
     //Asignacion de los movimientos del personaje
