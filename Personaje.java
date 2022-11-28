@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import javax.swing.*;
 
 public class Personaje {
     
@@ -17,10 +18,12 @@ public class Personaje {
             
     //Construccion grafico del personaje
     public void paint(Graphics grafico){
-        grafico.setColor(Color.BLUE);
+        /*grafico.setColor(Color.BLUE);
         grafico.fillOval(x,y,ancho,alto);
         grafico.setColor(Color.BLACK);
-        grafico.drawOval(x, y, alto, ancho);
+        grafico.drawOval(x, y, alto, ancho);*/
+        JLabel player = new JLabel();
+        player.setIcon(null);
     }
     
     //Asignacion de los movimientos del personaje
