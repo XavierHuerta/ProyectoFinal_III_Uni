@@ -19,10 +19,10 @@ public class Personaje {
             
     //Construccion grafico del personaje
     public void paint(Graphics grafico){
-        /*grafico.setColor(Color.BLUE);
+        grafico.setColor(Color.BLUE);
         grafico.fillOval(x,y,ancho,alto);
         grafico.setColor(Color.BLACK);
-        grafico.drawOval(x, y, alto, ancho);*/
+        grafico.drawOval(x, y, alto, ancho);
         
         
 
@@ -32,7 +32,7 @@ public class Personaje {
     //Asignacion de los movimientos del personaje
     //Idea, dar la posibilidad al usuario de cambiar las teclas por las que el desee
     public void teclaPresionada(KeyEvent evento){//37,38,39,40 son el valor de teclado de la flechas
-        int [][]laberito=lab.obtieneLaberito();
+        int [][]laberito=lab.obtieneLaberito(alto);
         if(evento.getKeyCode()==37){//flecha izquierda
             if(laberito[y/40][(x/40)-1]!=1){
                 x=x-movimiento;

@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 
 public class Juego extends JPanel{
+    int level = 4;
     
     //Instanciamiento de los objetos
     Laberito laberinto= new Laberito();
@@ -40,7 +41,7 @@ public class Juego extends JPanel{
     //Metodo paint del la clase graphics para la construccion grafica de nuestros objetos dentro del metodo main
     @Override
     public void paint(Graphics grafico){
-        laberinto.paint(grafico);
+        laberinto.paint(grafico,level);
         personaje.paint(grafico);
     }
     
